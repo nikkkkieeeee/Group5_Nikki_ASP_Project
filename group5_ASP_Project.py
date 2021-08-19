@@ -47,17 +47,6 @@ plt.xticks(index, ps.index, fontsize=10, rotation=80)
 plt.title("All other countries from (Period:2011 - 2020) ", size=12)
 plt.show();
 
-ps = psNotSorted.sort_values(ascending=False)
-index = np.arange(len(ps.index))
-plt.bar(ps.index, ps.values/2500)
-plt.xlabel("Countries", fontsize=10)
-plt.ylabel("No. of Travellers (In thousands)", fontsize=10)
-plt.xticks(index, ps.index, fontsize=10, rotation=80)
-plt.title("All other countries from (Period:2011 - 2020 ", size=12)
-print(psSorted.head(3))
-plt.show();
-
-
 top3 = psSorted.head(3)
 
 ps = top3.sort_values(ascending=False)
@@ -68,3 +57,11 @@ plt.xticks(index, ps.index, fontsize=10, rotation=45)
 plt.title('Top 3 Asia Countries from (Period:2011 - 2020)')
 plt.bar(ps.index, ps.values/1000)
 plt.show();
+
+class Test:
+    def sum(number):
+        return sum(number)
+    def mean(number):
+        return sum(number)/len(number)
+
+
