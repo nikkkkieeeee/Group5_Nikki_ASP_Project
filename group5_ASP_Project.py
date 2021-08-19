@@ -19,3 +19,6 @@ print(set1)
 
 print(set1.head(3))
 print(set1.tail(3))
+
+asia5new = country[['Brunei Darussalam','Indonesia','Malaysia','Myanmar','Philippines','Thailand','Vietnam','China','Hong Kong SAR','Taiwan','Japan','South Korea','Bangladesh','India','Pakistan','Sri Lanka','Iran','Israel','Kuwait','Saudi Arabia','United Arab Emirates']]
+print(asia5new)
