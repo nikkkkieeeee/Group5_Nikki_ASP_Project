@@ -47,4 +47,14 @@ plt.xticks(index, ps.index, fontsize=10, rotation=80)
 plt.title("All other countries from (Period:2011 - 2020 ", size=12)
 plt.show();
 
+ps = psNotSorted.sort_values(ascending=False)
+index = np.arange(len(ps.index))
+plt.bar(ps.index, ps.values/2500)
+plt.xlabel("Countries", fontsize=10)
+plt.ylabel("No. of Travellers (In thousands)", fontsize=10)
+plt.xticks(index, ps.index, fontsize=10, rotation=80)
+plt.title("All other countries from (Period:2011 - 2020 ", size=12)
+print(psSorted.head(3))
+plt.show();
+
 
