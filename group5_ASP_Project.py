@@ -1,20 +1,21 @@
 import pandas as pd
-data = pd.read_excel('IMVA.xls', sheet_name = 2)
-print(data)
+country = pd.read_excel('IMVA.xls', sheet_name = "IMVA")
+print(country)
 
-data.columns
-print(data.columns)
+print(country.columns)
 
-asia = data['Brunei Darussalam', 'Indonesia', 'Malaysia', 'Myanmar', 'Philippines', 'Thailand', 'Vietnam', 'Other Markets In Southeast Asia', 'Greater China', 'China', 'Hong Kong SAR', 'Taiwan', 'Other Markets In Greater China', 'North Asia', 'Japan', 'South Korea', 'Other Markets In North Asia', 'South Asia', 'Bangladesh', 'India', 'Pakistan', 'Sri Lanka', 'Other Markets In South Asia', 'West Asia', 'Iran', 'Israel', 'Kuwait', 'Saudi Arabia', 'United Arab Emirates']
-print(data.columns)
-
-asia = data(['Periods']).str.split
-
-data.head(3)
-print(data.head)
+asia5 = country[['Periods','Brunei Darussalam','Indonesia','Malaysia','Myanmar','Philippines','Thailand','Vietnam','China','Hong Kong SAR','Taiwan','Japan','South Korea','Bangladesh','India','Pakistan','Sri Lanka','Iran','Israel','Kuwait','Saudi Arabia','United Arab Emirates']]
+print(asia5.columns)
+print(asia5)
 
 
+date = asia5['Periods'].str.split(' ', n = 1, expand = True)
+print(date)
 
+asia5 = asia5.assign(year=date[0])
 
+set1 = asia5[(asia5['year']) >= str(2011)]
+print(set1)
 
-
+print(set1.head(3))
+print(set1.tail(3))
